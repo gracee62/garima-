@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Morning Garima ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+.garima-photo{
+    width:300px;
+    height:auto;
+}
+.photo-container{
+    display:flex;
+    justify-content:center;
+    margin:25px 0;
+}
+
+.garima-photo{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid rgba(255,255,255,0.8);
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    transition:0.4s;
+}
+
+.garima-photo:hover{
+    transform:scale(1.05);
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(
+        135deg,
+        #FFD166,
+        #FF9A8B,
+        #FECFEF,
+        #A18CD1
+    );
+    background-size:400% 400%;
+    animation:gradient 12s ease infinite;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.card{
+    max-width:850px;
+    width:100%;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:50px;
+    text-align:center;
+    color:white;
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+.sun{
+    font-size:70px;
+    animation:rise 3s ease-in-out infinite alternate;
+}
+
+@keyframes rise{
+    from{transform:translateY(0);}
+    to{transform:translateY(-10px);}
+}
+
+h1{
+    font-size:3rem;
+    margin-top:10px;
+}
+
+.subtitle{
+    margin-top:10px;
+    font-size:1.2rem;
+    opacity:0.95;
+}
+
+.message{
+    margin-top:30px;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+button{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff5e78;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.hidden{
+    display:none;
+    margin-top:25px;
+    font-size:1.3rem;
+    animation:fade 1s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.sparkle{
+    position:fixed;
+    color:white;
+    pointer-events:none;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+footer{
+    margin-top:25px;
+    opacity:0.85;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<img src="../garima.jpeg" alt="Garima" class="garima-photo">
+<h1>Good Morning Garima ❤️</h1>
+
+
+<p class="subtitle">
+Every sunrise brings a new chance...
+and today I'm hoping for a chance to make things right.
+</p>
+
+<div class="message">
+
+Dear Garima,
+
+I hope your morning starts with happiness,
+peace, and a beautiful smile.
+
+Before anything else, I want to say
+something from my heart...
+
+I'm truly sorry.
+
+I know I hurt you, and I know blocking you
+was wrong. Looking back, I wish I had handled
+everything differently.
+
+You deserve kindness, respect, and honesty,
+and I regret the moment I made you feel otherwise.
+
+Thank you for every smile,
+every memory,
+and every beautiful moment you've shared with me.
+
+You are someone very special to me,
+and I never wanted to be the reason for your sadness.
+
+This morning, I'm not asking you to forget what happened.
+
+I'm only asking for a chance to make things right.
+
+❤️
+
+</div>
+
+<button onclick="showLove()">
+🌹 Open My Heart 🌹
+</button>
+
+<div id="love" class="hidden">
+❤️ Thank You For Reading ❤️
+<br><br>
+You mean more to me than words can explain.
+<br><br>
+I hope your day is filled with smiles,
+warm sunshine, and happiness.
+<br><br>
+🌸 Have a Beautiful Morning, Garima 🌸
+<br><br>
+— Aayush ❤️
+</div>
+
+<footer>
+Made with ❤️ for Garima
+</footer>
+
+</div>
+
+<script>
+
+function showLove(){
+    document.getElementById("love").style.display="block";
+
+    for(let i=0;i<40;i++){
+        createSparkle();
+    }
+}
+
+function createSparkle(){
+    const sparkle=document.createElement("div");
+
+    sparkle.classList.add("sparkle");
+    sparkle.innerHTML=Math.random() > 0.5 ? "✨" : "⭐";
+
+    sparkle.style.left=Math.random()*100+"vw";
+    sparkle.style.fontSize=(Math.random()*20+15)+"px";
+    sparkle.style.animationDuration=(Math.random()*4+4)+"s";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(()=>{
+        sparkle.remove();
+    },8000);
+}
+
+setInterval(createSparkle,500);
+
+</script>
+
+</body>
+</html>
